@@ -54,6 +54,24 @@ a {
   background-color: lightcyan;
   color: blue;
 }
+
+table {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ccc;
+}
+
+
 #list li {
   display: inline-block;
   margin-right: 10px;
@@ -173,18 +191,3 @@ input:checked + .slider::before {
   text-transform: capitalize;
 }
 
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin: 2em 0;
-}
-th {
-  background-color: #ccc;
-}
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
