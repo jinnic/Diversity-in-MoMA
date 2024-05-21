@@ -9,7 +9,7 @@ I was introduced to this official [MoMA dataset](https://github.com/MuseumofMode
 - 🧽 Methodology, I used Tableau prep to clean and pre-process the data and D3.js to create the stacked bar charts.
 
 
-## Referance List
+## Reference List
 - Explore [diffrence](https://datavizcatalogue.com/methods/stacked_bar_graph.html) between Simple Stacked Bar Graphs and 100% Stack Bar Graph.
 - Understand [stacks](https://d3js.org/d3-shape/stack)
 - Learn to draw  [Simple Stacked Bar Graphs](https://observablehq.com/@d3/stacked-bar-chart/2) and [100% Stack Bar Graph](https://d3-graph-gallery.com/graph/barplot_stacked_percent.html).
@@ -18,4 +18,4 @@ I was introduced to this official [MoMA dataset](https://github.com/MuseumofMode
 
 
 ## Disclaimer
-_Please note that I don't claim to have all the answers here - I'm just sharing my thoughts based on data from the MoMA collection (as of May 2024). I'd love to hear your thoughts and ideas as well! The data on diversity is limited - it doesn't count dual or multiple nationalities, and it's not perfect. It is not my intention to make accusations, but it is a good starting point for discussion. I'm still learning about data processing, so there may be some mistakes here and there, and I'll continue to work on understanding the data better._
+_collection (as of May 2024). I'd love to hear your thoughts and ideas as well! The data on diversity is limited - it doesn't count dual or multiple nationalities, and it's not perfect. I'm still learning about data processing, so there may be some mistakes here and there, and I'll continue to work on understanding the data better._

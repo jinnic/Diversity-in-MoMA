@@ -139,10 +139,14 @@ const init = () => {
       .attr("value", d => d)
       .html(d => `${d}`)
 
-  const yearButton = d3.selectAll("li")
+
+  const yearButtons = d3.selectAll("li")
+    .style("background-color", year => {
+      return year === state.year ? "hotpink" : "none"
+    })
     .on("click", (e) => {
       state.year = e.target.value+"s";
-      console.log("year list clicked",e, state.year)
+      //console.log("year list clicked",e, state.year)
       draw();
     })
 
