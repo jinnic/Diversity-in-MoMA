@@ -6,11 +6,50 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
   </head>
   <body>
-    <h3>MoMA artwork distribution graph</h3>
-    <h4>yearly number of acquired work by country</h4>
-    <label for="dropdown">Show stacked graph by </label>
-    <select id="dropdown" name="dropdown"></select>
-    <ul id="list"></ul>
+    <div class="section">
+      <h1>Diversity in MoMA</h1>
+      <p>Data analysis and visualization of continental & gender distribution in the MoMA art collection</p>
+
+      <h2>Overview</h2>
+      <p>I was introduced to this official <a href="https://github.com/MuseumofModernArt">MoMA dataset</a> in the Interactive Data Visualization class as part of MS Data Analysis and Visualization. Intrigued by the access to this massive 151,834 works of art from their collection, I decided to focus on gender and nationalities in order to explore and understand the MoMA collection dataset.</p>
+
+      <ul>
+        <li>📊 Research, the goal of which is to explore the gender and nationalities of artists in the context of diversity in modern art institutions and MoMA in particular.</li>
+        <li>🧽 Methodology, I used Tableau prep to clean and pre-process the data and D3.js to create the stacked bar charts.</li>
+      </ul>
+
+      <h2>Referance List</h2>
+      <ul>
+        <li>Explore <a href="https://datavizcatalogue.com/methods/stacked_bar_graph.html">diffrence</a> between Simple Stacked Bar Graphs and 100% Stack Bar Graph.</li>
+        <li>Understand <a href="https://d3js.org/d3-shape/stack">stacks</a>.</li>
+        <li>Learn to draw <a href="https://observablehq.com/@d3/stacked-bar-chart/2">Simple Stacked Bar Graphs</a> and <a href="https://d3-graph-gallery.com/graph/barplot_stacked_percent.html">100% Stack Bar Graph</a>.</li>
+        <li>Convert to vertical graph to <a href="https://observablehq.com/@d3/stacked-normalized-horizontal-bar/2">horizontal graph</a>.</li>
+        <li>Change input data on <a href="https://d3-graph-gallery.com/graph/barplot_button_data_hard.html">button click</a>.</li>
+      </ul>
+
+      <h2>Disclaimer</h2>
+      <p>Please note that I don't claim to have all the answers here - I'm just sharing my thoughts based on data from the MoMA collection (as of May 2024). I'd love to hear your thoughts and ideas as well! The data on diversity is limited - it doesn't count dual or multiple nationalities, and it's not perfect. It is not my intention to make accusations, but it is a good starting point for discussion. I'm still learning about data processing, so there may be some mistakes here and there, and I'll continue to work on understanding the data better.</p>
+
+    </div>
+    <div class="section">
+      <h2>Exploring gender and continental diversity of artists at MOMA through works aquired over the decades.</h2>
+      <div class="control">
+        <div class = "flex">
+          <label for="dropdownData">Select data between</label>
+          <select id="dropdownData" name="dropdownData"></select>
+        </div>
+        <div class = "flex">
+          <p>Current selected year is</p> 
+          <ul id="list"></ul>
+        </div>
+        <div class = "flex">
+          <label for="dropdownStack">Show stacked graph by </label>
+          <select id="dropdownStack" name="dropdownStack"></select>
+        </div>
+      </div>
+    </div>
+    
+    
     <div id="container"></div>
     <script src="lib/d3.js"></script>
     <script src="main.js"></script>

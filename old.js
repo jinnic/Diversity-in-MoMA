@@ -1,79 +1,47 @@
 /* CONSTANTS AND GLOBALS */
-const width = window.innerWidth * 0.7
-      margin = 70;
-      marginTop = 30;
+const width = window.innerWidth * 0.8;
+      margin = 70,
       barHeight = 50;
 
 let height = 0;
-let svg, xScale, yScale, colorScale, xAxis, yAxis, gx, gy;
+let svg, xScale, yScale, colorScale, xAxis, yAxis, gx;
 
 /* STATE */
 let state = {
   data: [],
-  filteredData: [],
-  dataType: "gender",
   stackData: [],
   normalizedData: [],
-  graphType: "count",
-  year: "1930s",
-  departments:[],
+  selected: "count"
 }
 
-let years, departments, continents, genders, filteredData = [];
+let countries, years = [];
 
   
 /* LOAD DATA */
-d3.csv('data/MoMA-continent-gender.csv', d3.autoType)
+d3.csv('data/MoMA-yearly-sample.csv', d3.autoType)
   .then(raw_data => {
     state.data = raw_data;
     
-    // List of continents: 
-    // filter column continent name columns which range from 2 - 8 index
-    continents = state.data.columns.slice(2,9)
-
-    // List of genders: 
-    // filter gender name columns which range from 9
-    genders = state.data.columns.slice(9)
-
-    // List of years & departments: 
-    // map the value of the first & second column called Year & Department for Y axis and filtering
-    departments = [...new Set(state.data.map(d => (d.Department)))]
-    years = [...new Set(state.data.map(d => (d.Year)))]
-
+    // List of country: remove year column which is 0 index
+    countries = state.data.columns.slice(1)
+    // List of years: map the value of the first column called Year for X axis
+    years = state.data.map(d => (d.Year))
     
-    setData();
+    /** stacked data */
+    state.stackData = d3.stack()
+      .keys(countries)
+      .order(d3.stackOrderDescending)
+      (state.data)
+
+    state.normalizedData = d3.stack()
+      .keys(countries)
+      .order(d3.stackOrderDescending)
+      .offset(d3.stackOffsetExpand)
+      (state.data)
     
-    //console.log("load data",state.data)
-    init();
-  });
-
-const setData = () => {
-  filteredData = state.data.filter(d => 
-    d.Year === state.year
-  )
-  state.filteredData = filteredData
-  state.departments = [...new Set(state.filteredData.map(d => (d.Department)))]
-
-  const key = state.dataType === "gender" ? genders : continents
-  
-  colorScale = d3.scaleOrdinal(d3.schemeAccent)
-    .domain(key)
-
-  /** stacked data */
-  state.stackData = d3.stack()
-    .keys(key)
-    .order(d3.stackOrderDescending)
-    (state.filteredData)
-
-  state.normalizedData = d3.stack()
-    .keys(key)
-    .order(d3.stackOrderDescending)
-    .offset(d3.stackOffsetExpand)
-    (state.filteredData)
-
-  console.log("data update : ",state.year, state.filteredData)
-}
-
+      console.log("load data",state)
+      init();
+    });
 
 /* INITIALIZE */
 const init = () => {
@@ -87,65 +55,44 @@ const init = () => {
       return d[1]}))])
     .range([margin, width - margin])
   
-    // y scale - departments 
+    // y scale - years 
   yScale = d3.scaleBand()
-    .domain(state.departments)
-    .range([marginTop, height - margin])
+    .domain(years)
+    .range([height - margin, margin/3])
     .paddingInner(0.2)
     .paddingOuter(0.3)
   
-  colorScale = d3.scaleOrdinal(d3.schemeAccent)
-    .domain(genders)
+  colorScale = d3.scaleOrdinal(d3.schemePaired)
+    .domain(countries)
   
   // + AXIS
   xAxis = d3.axisBottom(xScale)
   yAxis = d3.axisLeft(yScale)
   
   // + UI  ELEMENT
-  const dropdownStack = d3.select("#dropdownStack")
+  const dropdown = d3.select("#dropdown")
 
-  const optionsStack = dropdownStack
+  const options = dropdown
       .selectAll("option")
       .data(["count", "percentage"])
       .join("option")
       .text(d => d)
       .attr("value", d => d)
   
-  dropdownStack
+  dropdown
       .on("change", (e) => {
-        state.graphType = e.target.value;
+        state.selected = e.target.value
+        
         draw();
       })
 
-  const dropdownData = d3.select("#dropdownData")
-
-  const optionsData = dropdownData
-      .selectAll("option")
-      .data(["gender", "continent"])
-      .join("option")
-      .text(d => d)
-      .attr("value", d => d)
-  
-      dropdownData
-      .on("change", (e) => {
-        state.dataType = e.target.value;
-        draw();
-      })
-    
   const yearList = d3.select("#list")
       .selectAll("li")
       .data(years)
       .join("li")
       .attr("value", d => d)
-      .html(d => `${d}`)
-
-  const yearButton = d3.selectAll("li")
-    .on("click", (e) => {
-      state.year = e.target.value+"s";
-      console.log("year list clicked",e, state.year)
-      draw();
-    })
-
+      .html(d => `<a>${d}</a>`)
+  
   // + CREATE SVG ELEMENT
   svg = d3.select("#container")
       .append("svg")
@@ -153,10 +100,7 @@ const init = () => {
       .attr("width", width)
       .attr("height", height)
       .style("overflow", "visible");
-
-  const control = d3.selectAll("div")
-  .style("width", width + 'px')
-
+      
   // + CALL AXES
   drawAxis(svg, xAxis, yAxis);
   draw();
@@ -165,23 +109,13 @@ const init = () => {
 /* DRAW */
 const draw = () => {
   
-  setData();
-  
-  yScale = d3.scaleBand()
-    .domain(state.departments)
-    .range([marginTop, height - margin])
-    .paddingInner(0.2)
-    .paddingOuter(0.3)
-  yAxis = d3.axisLeft(yScale)
-  
   // change data by selected dropdown value
-  const data = state.graphType === "count" ? state.stackData : state.normalizedData;
-  
+  const data = state.selected === "count" ? state.stackData : state.normalizedData;
   //update xScale
   xScale = d3.scaleLinear()
           .domain([0,  d3.max(data, d => d3.max(d, d => d[1]))])
           .range([margin, width - margin])
-  xAxis = state.graphType === "count" ? d3.axisBottom(xScale) : d3.axisBottom(xScale).ticks(width/100, "%")
+  xAxis = state.selected === "count" ? d3.axisBottom(xScale):d3.axisBottom(xScale).ticks(width/50, "%")
 
   //transition() returns transition, read more here(https://observablehq.com/@d3/selection-join)
   const t = svg.transition()
@@ -216,27 +150,22 @@ const draw = () => {
             ),
           exit => exit.remove()
         )  
-          .attr("y", d => yScale(d.data.Department))
+          .attr("y", d => yScale(d.data.Year))
           .attr("class", "bar")     
           .attr("height", yScale.bandwidth())
           .on("mouseover", mouseover)
           .on("mousemove", mousemove)
           .on("mouseleave", mouseleave)
-
-  gy.transition(t)
-    .call(yAxis)
-    .selectAll(".tick")
-
+  
   gx.transition(t)
     .call(xAxis)
     .selectAll(".tick")
     .delay((d, i) => i * 20);
 
 }
-
 const drawAxis = (svg, xAxis, yAxis) => {
       
-  gy = svg.append("g")
+  svg.append("g")
     .attr("transform", `translate(${margin}, 0)`)
     .call(yAxis)
 
@@ -247,26 +176,27 @@ const drawAxis = (svg, xAxis, yAxis) => {
 /** Tooltip */
 const tooltip = d3.select("#container")
   .append("div")
+  .style("opacity", 0)
   .attr("class", "tooltip")
-  
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "1px")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
+
 // Three function that change the tooltip when user hover / move / leave a cell
 const mouseover = function(event, d) {
   const country = d3.select(this.parentNode).datum().key;
   const count = d.data[country];
   tooltip
+      .html("Country: " + country + "<br>" + "Number of works: " + count)
       .style("opacity", 1)
 
 }
 const mousemove = function(event, d) {
-  const category = d3.select(this.parentNode).datum().key;
-  const count = d.data[category];
-  const [x, y] = d3.pointer(event);
-  console.log(d3.select(this).datum())
-  tooltip
-        .style("left",x+20+"px")
-        .style("top",y+20+"px")
-        .html(`<p class = "capitalize">${state.dataType}: ${category}</p>
-               <p class = "capitalize">Number of works: ${count}</p>`)
+  tooltip.style("transform","translateY(-55%)")
+        .style("left",(event.x)/2+"px")
+        .style("top",(event.y)/2-30+"px")
 }
 const mouseleave = function(event, d) {
   tooltip

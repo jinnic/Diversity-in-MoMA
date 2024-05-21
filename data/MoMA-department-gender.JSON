@@ -1,0 +1,243 @@
+{
+  "1930s": {
+      "Architecture & Design": {
+          "male": 395,
+          "female": 20
+      },
+      "Drawings & Prints": {
+          "male": 793,
+          "female": 21
+      },
+      "Film": {
+          "male": 5
+      },
+      "Painting & Sculpture": {
+          "male": 157,
+          "female": 4
+      },
+      "Photography": {
+          "male": 304,
+          "female": 5
+      }
+  },
+  "1940s": {
+      "Architecture & Design": {
+          "male": 648,
+          "female": 61
+      },
+      "Drawings & Prints": {
+          "non-binary": 2,
+          "male": 4535,
+          "female": 367
+      },
+      "Film": {
+          "male": 1
+      },
+      "Painting & Sculpture": {
+          "male": 265,
+          "female": 22
+      },
+      "Photography": {
+          "male": 1222,
+          "female": 134
+      }
+  },
+  "1950s": {
+      "Architecture & Design": {
+          "male": 860,
+          "female": 173
+      },
+      "Drawings & Prints": {
+          "male": 4080,
+          "female": 138
+      },
+      "Painting & Sculpture": {
+          "male": 389,
+          "female": 24
+      },
+      "Photography": {
+          "male": 688,
+          "female": 48
+      }
+  },
+  "1960s": {
+      "Architecture & Design": {
+          "male": 9218,
+          "female": 55
+      },
+      "Drawings & Prints": {
+          "non-binary": 2,
+          "male": 21226,
+          "female": 621
+      },
+      "Painting & Sculpture": {
+          "male": 554,
+          "female": 46
+      },
+      "Photography": {
+          "male": 7312,
+          "female": 426
+      }
+  },
+  "1970s": {
+      "Architecture & Design": {
+          "male": 1402,
+          "female": 174
+      },
+      "Drawings & Prints": {
+          "male": 7221,
+          "female": 1003
+      },
+      "Film": {
+          "male": 1,
+          "female": 1
+      },
+      "Media and Performance": {
+          "male": 60,
+          "female": 7
+      },
+      "Painting & Sculpture": {
+          "male": 375,
+          "female": 32
+      },
+      "Photography": {
+          "male": 2615,
+          "female": 378
+      }
+  },
+  "1980s": {
+      "Architecture & Design": {
+          "male": 1157,
+          "female": 96
+      },
+      "Drawings & Prints": {
+          "male": 4801,
+          "female": 669
+      },
+      "Film": {
+          "male": 3,
+          "female": 1
+      },
+      "Media and Performance": {
+          "male": 209,
+          "female": 92
+      },
+      "Painting & Sculpture": {
+          "male": 317,
+          "female": 48
+      },
+      "Photography": {
+          "male": 2927,
+          "female": 276
+      }
+  },
+  "1990s": {
+      "Architecture & Design": {
+          "male": 1586,
+          "female": 173
+      },
+      "Drawings & Prints": {
+          "male": 4327,
+          "female": 1749
+      },
+      "Film": {
+          "male": 5
+      },
+      "Media and Performance": {
+          "male": 364,
+          "female": 112
+      },
+      "Painting & Sculpture": {
+          "male": 434,
+          "female": 56
+      },
+      "Photography": {
+          "male": 2129,
+          "female": 811
+      }
+  },
+  "2000s": {
+      "Architecture & Design": {
+          "male": 2025,
+          "female": 404
+      },
+      "Drawings & Prints": {
+          "non-binary": 1,
+          "gender non-conforming": 2,
+          "male": 11684,
+          "female": 4221
+      },
+      "Film": {
+          "male": 41
+      },
+      "Fluxus Collection": {
+          "male": 1223,
+          "female": 102
+      },
+      "Media and Performance": {
+          "non-binary": 8,
+          "male": 883,
+          "female": 200
+      },
+      "Painting & Sculpture": {
+          "male": 360,
+          "female": 115
+      },
+      "Photography": {
+          "male": 3148,
+          "female": 435
+      }
+  },
+  "2010s": {
+      "Architecture & Design": {
+          "male": 5436,
+          "female": 1514
+      },
+      "Drawings & Prints": {
+          "male": 7122,
+          "female": 2709
+      },
+      "Film": {
+          "male": 94,
+          "female": 17
+      },
+      "Media and Performance": {
+          "non-binary": 1,
+          "male": 748,
+          "female": 541
+      },
+      "Painting & Sculpture": {
+          "non-binary": 2,
+          "male": 502,
+          "female": 181
+      },
+      "Photography": {
+          "male": 6012,
+          "female": 1766
+      }
+  },
+  "2020s": {
+      "Architecture & Design": {
+          "male": 627,
+          "female": 171
+      },
+      "Drawings & Prints": {
+          "transgender woman": 1,
+          "male": 2457,
+          "female": 456
+      },
+      "Media and Performance": {
+          "non-binary": 1,
+          "male": 64,
+          "female": 34
+      },
+      "Painting & Sculpture": {
+          "male": 81,
+          "female": 69
+      },
+      "Photography": {
+          "male": 486,
+          "female": 709
+      }
+  }
+}

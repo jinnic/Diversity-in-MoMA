@@ -9,9 +9,22 @@ h1 {
   margin: 0.25em 0;
 }
 
+h2 {
+  font-size: 2.5em;
+  margin: 35px 0 15px;
+  max-width: 900px;
+}
+
 h3 {
   font-size: 2em;
   margin: 0.25em 0;
+}
+
+div {
+  /* margin-top: 50px; */
+  margin: auto;
+  margin-bottom: 50px;
+  max-width: 800px;
 }
 
 p {
@@ -23,7 +36,107 @@ ul {
   padding: 0;
 }
 
-li {
+#list li {
   display: inline-block;
   margin-right: 10px; /* add spacing between items */
+  cursor: pointer;
+}
+
+.section {
+  
+}
+.control {
+  margin: auto;
+  min-width: 700px;
+}
+svg { 
+  margin-left: 3em;
+  margin: ;
+}
+
+#container{
+  max-width: 100%;
+  text-align: center
+}
+.bar {
+  cursor: help;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  margin: 0.7rem 0;
+  /* justify-content: center; */
+}
+.flex > * {
+  margin: 0px;
+}
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip p{
+  margin: 0.5em 0.2em;
+}
+
+#container {
+  position: relative;
+}
+/* Style the switch container */
+/* Hide the default checkbox */
+.switch input {
+  display: none;
+}
+
+/* Style the switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem; 
+  height: 1.5rem; 
+}
+
+/* Style the slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 2.5rem; 
+}
+
+/* Style the slider's appearance when it's in the checked state */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem; 
+  left: 0.2rem;
+  bottom: 0.2rem; 
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider::before {
+  transform: translateX(1.5rem); 
+}
+.label-left, .label-right{
+  background-color: none; 
+}
+
+.capitalize {
+  text-transform: capitalize;
 }

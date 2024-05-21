@@ -1,0 +1,387 @@
+{
+    "1930s": {
+      "Painting & Sculpture": {
+          "South America": 1,
+          "North America": 61,
+          "Europe": 99
+      },
+      "Drawings & Prints": {
+          "South America": 1,
+          "North America": 452,
+          "Europe": 360,
+          "Asia": 1
+      },
+      "Architecture & Design": {
+          "South America": 1,
+          "North America": 199,
+          "Europe": 212
+      },
+      "Photography": {
+          "North America": 286,
+          "Europe": 23
+      },
+      "Film": {
+          "North America": 5
+      }
+    },
+    "1940s": {
+        "Painting & Sculpture": {
+            "South America": 16,
+            "Oceania": 1,
+            "North America": 170,
+            "Europe": 97,
+            "Central America": 2,
+            "Caribbean": 2,
+            "Asia": 1
+        },
+        "Drawings & Prints": {
+            "South America": 77,
+            "Oceania": 2,
+            "North America": 2276,
+            "Europe": 2482,
+            "Central America": 26,
+            "Caribbean": 21,
+            "Asia": 18
+        },
+        "Architecture & Design": {
+            "South America": 8,
+            "North America": 359,
+            "Europe": 336,
+            "Asia": 2
+        },
+        "Photography": {
+            "North America": 1269,
+            "Europe": 86
+        }
+    },
+    "1950s": {
+        "Photography": {
+            "South America": 1,
+            "North America": 475,
+            "Europe": 164,
+            "Asia": 96
+        },
+        "Painting & Sculpture": {
+            "South America": 6,
+            "Oceania": 2,
+            "North America": 168,
+            "Europe": 229,
+            "Central America": 3,
+            "Caribbean": 2,
+            "Asia": 3
+        },
+        "Drawings & Prints": {
+            "South America": 71,
+            "Oceania": 1,
+            "North America": 1079,
+            "Europe": 2901,
+            "Central America": 1,
+            "Caribbean": 3,
+            "Asia": 117,
+            "Africa": 2
+        },
+        "Architecture & Design": {
+            "South America": 6,
+            "North America": 381,
+            "Europe": 635,
+            "Asia": 11
+        }
+    },
+    "1960s": {
+        "Photography": {
+            "South America": 1,
+            "North America": 2229,
+            "Europe": 5492,
+            "Asia": 16
+        },
+        "Painting & Sculpture": {
+            "South America": 24,
+            "Oceania": 2,
+            "North America": 317,
+            "Europe": 220,
+            "Asia": 30,
+            "Africa": 6
+        },
+        "Drawings & Prints": {
+            "South America": 569,
+            "Oceania": 20,
+            "North America": 5737,
+            "Europe": 14988,
+            "Central America": 69,
+            "Caribbean": 47,
+            "Asia": 353,
+            "Africa": 6
+        },
+        "Architecture & Design": {
+            "South America": 26,
+            "Oceania": 1,
+            "North America": 8689,
+            "Europe": 518,
+            "Asia": 32,
+            "Africa": 1
+        }
+    },
+    "1970s": {
+        "Photography": {
+            "South America": 5,
+            "North America": 2210,
+            "Europe": 568,
+            "Asia": 195,
+            "Africa": 12
+        },
+        "Painting & Sculpture": {
+            "South America": 8,
+            "North America": 253,
+            "Europe": 142,
+            "Asia": 4
+        },
+        "Media and Performance": {
+            "North America": 54,
+            "Europe": 1,
+            "Asia": 12
+        },
+        "Film": {
+            "North America": 1,
+            "Asia": 1
+        },
+        "Drawings & Prints": {
+            "South America": 300,
+            "North America": 4570,
+            "Europe": 2999,
+            "Central America": 40,
+            "Asia": 204,
+            "Africa": 1
+        },
+        "Architecture & Design": {
+            "South America": 3,
+            "North America": 1123,
+            "Europe": 418,
+            "Asia": 32
+        }
+    },
+    "1980s": {
+        "Photography": {
+            "South America": 8,
+            "North America": 2167,
+            "Europe": 1021,
+            "Asia": 4,
+            "Africa": 2
+        },
+        "Painting & Sculpture": {
+            "South America": 1,
+            "North America": 200,
+            "Europe": 158,
+            "Asia": 5,
+            "Africa": 1
+        },
+        "Media and Performance": {
+            "South America": 23,
+            "North America": 184,
+            "Europe": 57,
+            "Caribbean": 3,
+            "Asia": 33
+        },
+        "Drawings & Prints": {
+            "South America": 76,
+            "North America": 2974,
+            "Europe": 2319,
+            "Asia": 44
+        },
+        "Architecture & Design": {
+            "South America": 4,
+            "North America": 427,
+            "Europe": 710,
+            "Caribbean": 1,
+            "Asia": 107,
+            "Africa": 1
+        },
+        "Film": {
+            "North America": 3,
+            "Europe": 12,
+            "Asia": 1
+        }
+    },
+    "1990s": {
+        "Photography": {
+            "South America": 15,
+            "North America": 2100,
+            "Europe": 759,
+            "Asia": 42,
+            "Africa": 24
+        },
+        "Painting & Sculpture": {
+            "South America": 6,
+            "North America": 288,
+            "Europe": 160,
+            "Asia": 33,
+            "Africa": 3
+        },
+        "Media and Performance": {
+            "South America": 23,
+            "North America": 300,
+            "Europe": 134,
+            "Asia": 17,
+            "Africa": 6
+        },
+        "Drawings & Prints": {
+            "South America": 126,
+            "North America": 3541,
+            "
+
+Europe": 2344,
+            "Asia": 42,
+            "Africa": 13
+        },
+        "Architecture & Design": {
+            "South America": 24,
+            "North America": 451,
+            "Europe": 1122,
+            "Asia": 158,
+            "Africa": 11
+        },
+        "Film": {
+            "North America": 5
+        }
+    },
+    "2000s": {
+        "Photography": {
+            "South America": 20,
+            "North America": 2587,
+            "Europe": 808,
+            "Asia": 108,
+            "Africa": 47
+        },
+        "Painting & Sculpture": {
+            "South America": 37,
+            "North America": 276,
+            "Europe": 152,
+            "Asia": 4,
+            "Africa": 5
+        },
+        "Media and Performance": {
+            "South America": 8,
+            "North America": 442,
+            "Europe": 576,
+            "Asia": 59,
+            "Africa": 6
+        },
+        "Drawings & Prints": {
+            "South America": 829,
+            "North America": 7750,
+            "Europe": 6221,
+            "Asia": 850,
+            "Africa": 219
+        },
+        "Architecture & Design": {
+            "South America": 47,
+            "North America": 807,
+            "Europe": 1432,
+            "Asia": 126,
+            "Africa": 11
+        },
+        "Fluxus Collection": {
+            "Oceania": 1,
+            "North America": 939,
+            "Europe": 316,
+            "Asia": 69
+        },
+        "Film": {
+            "North America": 29,
+            "Europe": 12,
+            "Asia": 1,
+            "Africa": 1
+        }
+    },
+    "2010s": {
+        "Photography": {
+            "South America": 336,
+            "North America": 2909,
+            "Europe": 4042,
+            "Asia": 372,
+            "Africa": 119
+        },
+        "Painting & Sculpture": {
+            "South America": 121,
+            "North America": 292,
+            "Europe": 215,
+            "Central America": 2,
+            "Caribbean": 2,
+            "Asia": 34,
+            "Africa": 14
+        },
+        "Media and Performance": {
+            "South America": 140,
+            "North America": 777,
+            "Europe": 281,
+            "Asia": 61,
+            "Africa": 24
+        },
+        "Drawings & Prints": {
+            "South America": 568,
+            "North America": 5224,
+            "Europe": 2975,
+            "Asia": 400,
+            "Africa": 655
+        },
+        "Architecture & Design": {
+            "South America": 1494,
+            "North America": 2260,
+            "Europe": 2849,
+            "Central America": 14,
+            "Caribbean": 14,
+            "Asia": 306,
+            "Africa": 11
+        },
+        "Film": {
+            "North America": 54,
+            "Europe": 55,
+            "Asia": 1,
+            "Africa": 1
+        }
+    },
+    "2020s": {
+        "Photography": {
+            "South America": 61,
+            "North America": 904,
+            "Europe": 123,
+            "Asia": 57,
+            "Africa": 49
+        },
+        "Painting & Sculpture": {
+            "South America": 21,
+            "North America": 77,
+            "Europe": 24,
+            "Central America": 2,
+            "Caribbean": 1,
+            "Asia": 11,
+            "Africa": 15
+        },
+        "Media and Performance": {
+            "South America": 28,
+            "North America": 45,
+            "Europe": 14,
+            "Central America": 1,
+            "Caribbean": 1,
+            "Asia": 7,
+            "Africa": 3
+        },
+        "Drawings & Prints": {
+            "South America": 101,
+            "North America": 2443,
+            "Europe": 259,
+            "Central America": 4,
+            "Caribbean": 4,
+            "Asia": 34,
+            "Africa": 72
+        },
+        "Architecture & Design": {
+            "South America": 20,
+            "North America": 160,
+            "Europe": 146,
+            "Central America": 2,
+            "Caribbean": 1,
+            "Asia": 470,
+            "Africa": 11
+        }
+    }
+}

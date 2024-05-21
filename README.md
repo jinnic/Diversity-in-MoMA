@@ -1,8 +1,8 @@
-# Diversity-in-MoMA
- Data analysis and visualization of nationality & gender distribution in the MoMa art collection
+# Diversity in MoMA
+ Data analysis and visualization of nationality & gender distribution in the MoMA art collection
 
 ## Overview
-I was introduced to this official [MoMa dataset](https://github.com/MuseumofModernArt) in the Interactive Data Visualization class as part of MS Data Analysis and Visualization. Intrigued by the access to this massive 151,834 works of art from their collection, I decided to focus on gender and nationalities in order to explore and understand the MoMA collection dataset. 
+I was introduced to this official [MoMA dataset](https://github.com/MuseumofModernArt) in the Interactive Data Visualization class as part of MS Data Analysis and Visualization. Intrigued by the access to this massive 151,834 works of art from their collection, I decided to focus on gender and nationalities in order to explore and understand the MoMA collection dataset. 
 
 - 📊 Research, the goal of which is to explore the gender and nationalities of artists in the context of diversity in modern art institutions and MoMA in particular.
 
