@@ -2,6 +2,7 @@
   <head>
     <meta charset="utf-8">
     <title>MoMA artwork distribution graph</title>
+    <link href="https://db.onlinewebfonts.com/c/211be15f3b79857b52ec64538f6032a2?family=MoMA+Sans+Web+Semibold+Regular" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
   </head>
@@ -11,25 +12,17 @@
       <!-- <p>Data analysis and visualization of continental & gender distribution in the MoMA art collection</p> -->
 
       <h2>Overview</h2>
-      <p>I was introduced to this official <a href="https://github.com/MuseumofModernArt">MoMA dataset</a> in the Interactive Data Visualization class as part of MS Data Analysis and Visualization. Intrigued by the access to this massive 151,834 works of art from their collection, I decided to focus on gender and nationalities in order to explore and understand the MoMA collection dataset.</p>
+      <p>I was introduced to this official <a href="https://github.com/MuseumofModernArt">MoMA dataset</a> in the Interactive Data Visualization class as part of MS Data Analysis and Visualization. Intrigued by the access to this massive 153,741 works of art from their collection, I decided to focus on gender and nationalities in order to explore and understand the MoMA collection dataset.</p>
 
       <ul>
         <li>📊 Research, the goal of which is to explore the gender and nationalities of artists in the context of diversity in modern art institutions and MoMA in particular.</li>
         <li>🧽 Methodology, I used Tableau prep to clean and pre-process the data and D3.js to create the stacked bar charts.</li>
       </ul>
 
-      <h2>Reference List</h2>
-      <ul>
-        <li>Explore <a href="https://datavizcatalogue.com/methods/stacked_bar_graph.html">diffrence</a> between Simple Stacked Bar Graphs and 100% Stack Bar Graph.</li>
-        <li>Understand <a href="https://d3js.org/d3-shape/stack">stacks</a>.</li>
-        <li>Learn to draw <a href="https://observablehq.com/@d3/stacked-bar-chart/2">Simple Stacked Bar Graphs</a> and <a href="https://d3-graph-gallery.com/graph/barplot_stacked_percent.html">100% Stack Bar Graph</a>.</li>
-        <li>Convert to vertical graph to <a href="https://observablehq.com/@d3/stacked-normalized-horizontal-bar/2">horizontal graph</a>.</li>
-        <li>Change input data on <a href="https://d3-graph-gallery.com/graph/barplot_button_data_hard.html">button click</a>.</li>
-      </ul>
-
     </div>
+    
     <div class="section">
-      <h2>Exploring gender and continental diversity of artists at MOMA through works aquired over the decades.</h2>
+      <h2>Exploring gender and continental diversity of artists at MOMA through works acquired over the decades.</h2>
       <div class="control">
         <div class = "flex">
           <label for="dropdownData">Select data between</label>
@@ -45,9 +38,233 @@
         </div>
       </div>
     </div>
-    
-    
     <div id="container"></div>
+
+    <div class="section">
+      <h2>Data Analysis</h2>
+      <h3>Gender Distribution</h3>
+      <table>
+        <tr>
+          <th>Gender</th>
+          <th>Count of Artworks</th>
+          <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>Male</td>
+            <td>130,889</td>
+            <td>85.1%</td>
+        </tr>
+        <tr>
+            <td>Female</td>
+            <td>22,832</td>
+            <td>14.8%</td>
+        </tr>
+        <tr>
+            <td>Non-binary</td>
+            <td>17</td>
+            <td>0.01%</td>
+        </tr>
+        <tr>
+            <td>Gender Non-conforming</td>
+            <td>2</td>
+            <td>0.001%</td>
+        </tr>
+        <tr>
+            <td>Transgender Woman</td>
+            <td>1</td>
+            <td>0.0007%</td>
+        </tr>
+      </table>
+      <p>
+        The gender distribution analysis of artists whose artworks have been acquired by MoMA reveals a significant disparity between male and female artists, 
+        with a vast majority of artworks created by male artists. Specifically, 130,889 artworks (approximately 85.1%) are attributed to male artists, 
+        while 22,832 artworks (approximately 14.8%) are by female artists. Additionally, there is a minimal representation of other gender identities: 17 artworks by non-binary artists, 2 artworks by gender non-conforming artists, and 1 artwork by a transgender woman, each constituting a negligible percentage of the total acquisitions. This distribution highlights the need for increased inclusivity and representation of diverse gender identities in the art world.
+      </p>
+      <h3>Nationality Distribution of top 20</h3>
+      <table>
+        <tr>
+            <th>Nationality</th>
+            <th>Count of Artworks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>American</td>
+            <td>70,153</td>
+            <td>45.6%</td>
+        </tr>
+        <tr>
+            <td>French</td>
+            <td>23,883</td>
+            <td>15.5%</td>
+        </tr>
+        <tr>
+            <td>German</td>
+            <td>9,720</td>
+            <td>6.3%</td>
+        </tr>
+        <tr>
+            <td>British</td>
+            <td>6,527</td>
+            <td>4.2%</td>
+        </tr>
+        <tr>
+            <td>Russian</td>
+            <td>3,443</td>
+            <td>2.2%</td>
+        </tr>
+        <tr>
+            <td>Italian</td>
+            <td>3,268</td>
+            <td>2.1%</td>
+        </tr>
+        <tr>
+            <td>Spanish</td>
+            <td>3,068</td>
+            <td>2.0%</td>
+        </tr>
+        <tr>
+            <td>Japanese</td>
+            <td>2,840</td>
+            <td>1.8%</td>
+        </tr>
+        <tr>
+            <td>Swiss</td>
+            <td>2,509</td>
+            <td>1.6%</td>
+        </tr>
+        <tr>
+            <td>Argentine</td>
+            <td>2,055</td>
+            <td>1.3%</td>
+        </tr>
+        <tr>
+            <td>Dutch</td>
+            <td>1,903</td>
+            <td>1.2%</td>
+        </tr>
+        <tr>
+            <td>Mexican</td>
+            <td>1,511</td>
+            <td>1.0%</td>
+        </tr>
+        <tr>
+            <td>Belgian</td>
+            <td>1,492</td>
+            <td>1.0%</td>
+        </tr>
+        <tr>
+            <td>Austrian</td>
+            <td>1,202</td>
+            <td>0.8%</td>
+        </tr>
+        <tr>
+            <td>Canadian</td>
+            <td>1,021</td>
+            <td>0.7%</td>
+        </tr>
+        <tr>
+            <td>Brazilian</td>
+            <td>906</td>
+            <td>0.6%</td>
+        </tr>
+        <tr>
+            <td>Hungarian</td>
+            <td>821</td>
+            <td>0.5%</td>
+        </tr>
+        <tr>
+            <td>Czech</td>
+            <td>811</td>
+            <td>0.5%</td>
+        </tr>
+        <tr>
+            <td>Colombian</td>
+            <td>794</td>
+            <td>0.5%</td>
+        </tr>
+        <tr>
+            <td>Chinese</td>
+            <td>642</td>
+            <td>0.4%</td>
+        </tr>
+    </table>
+      <p>
+        The nationality distribution analysis of artists whose artworks have been acquired by MoMA reveals significant imbalances in representation, with a notable concentration in a few countries. American artists lead prominently with 70,153 artworks, representing approximately 45.6% of the total collection. French artists follow with 23,883 artworks (about 15.5%), and German artists contribute 9,720 artworks (around 6.3%). British artists are also well-represented with 6,527 artworks (approximately 4.2%).
+      </p>
+      <p>
+        However, many other nationalities are significantly underrepresented. For example, Russian (3,443 artworks, 2.2%), Italian (3,268 artworks, 2.1%), Spanish (3,068 artworks, 2.0%), and Japanese (2,840 artworks, 1.8%) artists have relatively low percentages, while numerous other nationalities each account for less than 1% of the total collection.
+      </p>
+      <p>
+        While MoMA's collection includes works from a variety of nationalities, the significant skew towards a few countries highlights an area for potential growth. Enhancing diversity by acquiring more works from underrepresented countries could improve cultural representation and inclusivity, offering a richer, more global perspective on art.
+      </p>
+      <h3>Continental Distribution</h3>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>Continent</th>
+                <th>Count of Artwork</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>North America</td>
+                <td>72,979</td>
+                <td>47.5%</td>
+            </tr>
+            <tr>
+                <td>Europe</td>
+                <td>62,254</td>
+                <td>40.5%</td>
+            </tr>
+            <tr>
+                <td>South America</td>
+                <td>5,261</td>
+                <td>3.4%</td>
+            </tr>
+            <tr>
+                <td>Asia</td>
+                <td>4,583</td>
+                <td>3.0%</td>
+            </tr>
+            <tr>
+                <td>Africa</td>
+                <td>1,322</td>
+                <td>0.9%</td>
+            </tr>
+            <tr>
+                <td>Oceania</td>
+                <td>276</td>
+                <td>0.2%</td>
+            </tr>
+            <tr>
+                <td>Central America</td>
+                <td>147</td>
+                <td>0.1%</td>
+            </tr>
+            <tr>
+                <td>Caribbean</td>
+                <td>105</td>
+                <td>0.07%</td>
+            </tr>
+        </tbody>
+    </table>
+    
+      <p>
+        The continental distribution of artists whose artworks have been acquired by MoMA highlights a significant dominance of works from North America and Europe. Specifically, 72,979 artworks (approximately 47.5%) are attributed to artists from North America, and 62,254 artworks (approximately 40.5%) are from Europe. Other continents have much smaller representations, with South America contributing 5,261 artworks (approximately 3.4%), Asia contributing 4,583 artworks (approximately 3.0%), and Africa contributing 1,322 artworks (approximately 0.9%). Oceania, Central America, and the Caribbean have even smaller contributions, with 276 artworks (approximately 0.2%), 147 artworks (approximately 0.1%), and 105 artworks (approximately 0.07%), respectively. This distribution indicates a strong preference for North American and European artists within MoMA's collection, while other regions are underrepresented.
+      </p>
+    </div>
+    
+    <div class="section">
+      <h2>Reference List</h2>
+      <ul>
+        <li>Explore <a href="https://datavizcatalogue.com/methods/stacked_bar_graph.html">diffrence</a> between Simple Stacked Bar Graphs and 100% Stack Bar Graph.</li>
+        <li>Understand <a href="https://d3js.org/d3-shape/stack">stacks</a>.</li>
+        <li>Learn to draw <a href="https://observablehq.com/@d3/stacked-bar-chart/2">Simple Stacked Bar Graphs</a> and <a href="https://d3-graph-gallery.com/graph/barplot_stacked_percent.html">100% Stack Bar Graph</a>.</li>
+        <li>Convert to vertical graph to <a href="https://observablehq.com/@d3/stacked-normalized-horizontal-bar/2">horizontal graph</a>.</li>
+        <li>Change input data on <a href="https://d3-graph-gallery.com/graph/barplot_button_data_hard.html">button click</a>.</li>
+      </ul>
+    </div>
     <div class="section">
       <h2>Disclaimer</h2>
       <p>Please note that I don't claim to have all the answers here - I'm just sharing my thoughts based on data from the MoMA collection (as of May 2024). I'd love to hear your thoughts and ideas as well! The data on diversity is limited - it doesn't count dual or multiple nationalities, and it's not perfect. I'm still learning about data processing, so there may be some mistakes here and there, and I'll continue to work on understanding the data better.</p>

@@ -1,6 +1,16 @@
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+@import url(https://db.onlinewebfonts.com/c/211be15f3b79857b52ec64538f6032a2?family=MoMA+Sans+Web+Semibold+Regular);
+@font-face {
+  font-family: "MoMA Sans";
+  src: url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.eot");
+  src: url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.svg#MoMA Sans Web Semibold Regular")format("svg");
+}
+body, option{
+  font-family: "MoMA Sans","Source Sans Pro", sans-serif;
+  font-size: 1em;
   padding: 1em;
 }
 
@@ -16,19 +26,20 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
-  margin: 0.25em 0;
+  font-size: 1.5em;
+  margin: 0.2em 0;
 }
 
 div {
   /* margin-top: 50px; */
   margin: auto;
   margin-bottom: 50px;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 p {
   font-size: 1em;
+  line-height: 1.4em;
 }
 
 ul {
@@ -36,23 +47,44 @@ ul {
   padding: 0;
 }
 
+li {
+  margin: 1rem 0;
+}
+a {
+  background-color: lightcyan;
+  color: blue;
+}
 #list li {
   display: inline-block;
-  margin-right: 10px; /* add spacing between items */
+  margin-right: 10px;
   cursor: pointer;
 }
 
-.section {
-  
+.active {
+  background-color: rgb(249, 185, 22);
+  text-decoration: underline;
+  font-weight: bolder;
 }
 .control {
   margin: auto;
   min-width: 700px;
 }
+
+.section {
+  border-top: 3pt solid;
+}
+
 svg { 
   margin-left: 3em;
   margin: ;
 }
+g.tick > text {
+  font-family: "MoMA Sans","Source Sans Pro", sans-serif;
+  font-size: 10pt;
+  padding: 1em;
+  max-width: 100px;
+}
+
 
 #container{
   max-width: 100%;
@@ -139,4 +171,20 @@ input:checked + .slider::before {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2em 0;
+}
+th {
+  background-color: #ccc;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }

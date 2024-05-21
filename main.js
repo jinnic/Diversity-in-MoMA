@@ -132,7 +132,7 @@ const init = () => {
         draw();
       })
     
-  const yearList = d3.select("#list")
+  const yearUl = d3.select("#list")
       .selectAll("li")
       .data(years)
       .join("li")
@@ -140,16 +140,28 @@ const init = () => {
       .html(d => `${d}`)
 
 
-  const yearButtons = d3.selectAll("li")
+  const yearLi = d3.selectAll("li")
     // .style("background-color", year => {
     //   return year === state.year ? "hotpink" : "none"
     // })
+    .attr("class", year => {
+      return year === state.year ? "active" : ""
+    })
     .on("click", (e) => {
       state.year = e.target.value+"s";
-      //console.log("year list clicked",e, state.year)
+      
+      yearLi.each(function(d,i) {
+        //console.log(i, d, this);
+        d3.select(this)
+          .classed("active",false)
+        })
+      
+      e.target.setAttribute("class", "active")
+
+      //console.log("year list clicked",e.target, yearLi)
       draw();
     })
-
+  
   // + CREATE SVG ELEMENT
   svg = d3.select("#container")
       .append("svg")
@@ -241,10 +253,12 @@ const draw = () => {
 const drawAxis = (svg, xAxis, yAxis) => {
       
   gy = svg.append("g")
+    .attr("class", "x-axis")
     .attr("transform", `translate(${margin}, 0)`)
     .call(yAxis)
 
   gx = svg.append("g")
+    .attr("class", "y-axis")
     .attr("transform", `translate(0, ${height - margin})`)
     .call(xAxis)
 }
