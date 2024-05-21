@@ -71,7 +71,7 @@ const setData = () => {
     .offset(d3.stackOffsetExpand)
     (state.filteredData)
 
-  console.log("data update : ",state.year, state.filteredData)
+  // console.log("data update : ",state.year, state.filteredData)
 }
 
 
@@ -158,7 +158,7 @@ const init = () => {
       .attr("height", height)
       .style("overflow", "visible");
 
-  const control = d3.selectAll("div")
+  const control = d3.selectAll(".section")
   .style("width", width + 'px')
 
   // + CALL AXES
@@ -265,7 +265,7 @@ const mousemove = function(event, d) {
   const category = d3.select(this.parentNode).datum().key;
   const count = d.data[category];
   const [x, y] = d3.pointer(event);
-  console.log(d3.select(this).datum())
+  // console.log(d3.select(this).datum())
   tooltip
         .style("left",x+20+"px")
         .style("top",y+20+"px")
