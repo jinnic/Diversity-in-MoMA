@@ -141,9 +141,9 @@ const init = () => {
 
 
   const yearButtons = d3.selectAll("li")
-    .style("background-color", year => {
-      return year === state.year ? "hotpink" : "none"
-    })
+    // .style("background-color", year => {
+    //   return year === state.year ? "hotpink" : "none"
+    // })
     .on("click", (e) => {
       state.year = e.target.value+"s";
       //console.log("year list clicked",e, state.year)
