@@ -8,6 +8,8 @@
   url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/211be15f3b79857b52ec64538f6032a2.svg#MoMA Sans Web Semibold Regular")format("svg");
 }
+
+
 body, option{
   font-family: "MoMA Sans","Source Sans Pro", sans-serif;
   font-size: 1em;
@@ -22,7 +24,6 @@ h1 {
 h2 {
   font-size: 2.5em;
   margin: 35px 0 15px;
-  max-width: 900px;
 }
 
 h3 {
@@ -34,12 +35,13 @@ div {
   /* margin-top: 50px; */
   margin: auto;
   margin-bottom: 50px;
-  max-width: 850px;
+  max-width: 900px;
 }
 
-p {
-  font-size: 1em;
-  line-height: 1.4em;
+p, li, label, select{
+  font-size: 1.3em;
+  line-height: 1.7em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -56,8 +58,9 @@ a {
 }
 
 table {
-  width: 50%;
-  margin: 20px auto;
+  width: 70%;
+  font-size: 0.8em;
+  margin: 20px 0;
   border-collapse: collapse;
 }
 th, td {
@@ -65,8 +68,8 @@ th, td {
   padding: 8px;
 }
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   text-align: left;
   background-color: #ccc;
 }
@@ -139,52 +142,6 @@ g.tick > text {
 
 #container {
   position: relative;
-}
-/* Style the switch container */
-/* Hide the default checkbox */
-.switch input {
-  display: none;
-}
-
-/* Style the switch container */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 3rem; 
-  height: 1.5rem; 
-}
-
-/* Style the slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 2.5rem; 
-}
-
-/* Style the slider's appearance when it's in the checked state */
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 1rem;
-  width: 1rem; 
-  left: 0.2rem;
-  bottom: 0.2rem; 
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider::before {
-  transform: translateX(1.5rem); 
-}
-.label-left, .label-right{
-  background-color: none; 
 }
 
 .capitalize {
